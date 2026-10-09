@@ -15,6 +15,8 @@ html{scroll-behavior:smooth}
 </head>
 <body>
 
+
+
 <div style="background:#F6F1E9;color:#2B2420;font-family:'Karla',system-ui,sans-serif;font-size:17px;line-height:1.6">
 
 <!-- NAV -->
@@ -93,23 +95,23 @@ html{scroll-behavior:smooth}
 <span><strong style="color:#2B2420">Règlement</strong> : virement ou chèque, à réception de la confirmation</span>
 </div>
 </div>
-<form onsubmit="event.preventDefault();var b=this.querySelector('button');b.textContent='Version test : commande non envoyée';" style="flex:2 1 520px;min-width:0;background:#FBF8F3;border:1px solid #D9CDBD;padding:40px;display:flex;flex-direction:column;gap:24px;box-sizing:border-box">
+<form id="commande" style="flex:2 1 520px;min-width:0;background:#FBF8F3;border:1px solid #D9CDBD;padding:40px;display:flex;flex-direction:column;gap:24px;box-sizing:border-box">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:20px">
 <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:500">Prénom
-<input type="text" name="prenom" autocomplete="given-name" style="min-height:48px;padding:0 14px;border:1px solid #A89883;background:#FFFFFF;font-size:17px;color:#2B2420;box-sizing:border-box;width:100%">
+<input type="text" name="prenom" required autocomplete="given-name" style="min-height:48px;padding:0 14px;border:1px solid #A89883;background:#FFFFFF;font-size:17px;color:#2B2420;box-sizing:border-box;width:100%">
 </label>
 <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:500">Nom
-<input type="text" name="nom" autocomplete="family-name" style="min-height:48px;padding:0 14px;border:1px solid #A89883;background:#FFFFFF;font-size:17px;color:#2B2420;box-sizing:border-box;width:100%">
+<input type="text" name="nom" required autocomplete="family-name" style="min-height:48px;padding:0 14px;border:1px solid #A89883;background:#FFFFFF;font-size:17px;color:#2B2420;box-sizing:border-box;width:100%">
 </label>
 <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:500">Adresse e-mail
-<input type="email" name="email" autocomplete="email" style="min-height:48px;padding:0 14px;border:1px solid #A89883;background:#FFFFFF;font-size:17px;color:#2B2420;box-sizing:border-box;width:100%">
+<input type="email" name="email" required autocomplete="email" style="min-height:48px;padding:0 14px;border:1px solid #A89883;background:#FFFFFF;font-size:17px;color:#2B2420;box-sizing:border-box;width:100%">
 </label>
 <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:500">Téléphone (facultatif)
 <input type="tel" name="telephone" autocomplete="tel" style="min-height:48px;padding:0 14px;border:1px solid #A89883;background:#FFFFFF;font-size:17px;color:#2B2420;box-sizing:border-box;width:100%">
 </label>
 </div>
 <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:500">Adresse de livraison
-<textarea name="adresse" rows="3" autocomplete="street-address" style="padding:12px 14px;border:1px solid #A89883;background:#FFFFFF;font-size:17px;color:#2B2420;box-sizing:border-box;width:100%;resize:vertical"></textarea>
+<textarea name="adresse" required rows="3" autocomplete="street-address" style="padding:12px 14px;border:1px solid #A89883;background:#FFFFFF;font-size:17px;color:#2B2420;box-sizing:border-box;width:100%;resize:vertical"></textarea>
 </label>
 <div style="display:flex;flex-wrap:wrap;gap:20px 32px;align-items:flex-end">
 <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:500">Nombre d'exemplaires
@@ -132,6 +134,8 @@ Je souhaite une dédicace
 <button type="submit" style="min-height:52px;padding:0 36px;border:0;background:#A3452A;color:#FFFFFF;font-size:17px;font-weight:700;cursor:pointer">Envoyer ma commande</button>
 <span style="font-size:14px;color:#5E524A;max-width:36ch">Vos données ne servent qu'à traiter votre commande.</span>
 </div>
+<div style="position:absolute;left:-9999px" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></div>
+<p id="commande-statut" role="status" aria-live="polite" style="margin:0;font-size:16px;font-weight:500"></p>
 </form>
 </div>
 </section>
@@ -200,7 +204,7 @@ Je souhaite une dédicace
 <div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:20px">
 <h2 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:48px;line-height:1.05">Biographie</h2>
 <p style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;line-height:1.35;color:#5E524A;max-width:40ch">Universitaire spécialiste des ressources humaines, philologue, autrice.</p>
-<p style="margin:0;max-width:62ch">Née le 17 avril 1937 à Braunschweig en Allemagne, Ingrid Brunstein (née Bielitz) est philologue et a enseigné l'anglais et l'allemand aux adultes. Après un DESS en gestion des ressources humaines, elle a travaillé dans la métallurgie, puis, après un doctorat ès sciences des organisations, elle est devenue maître de conférences à l'université de Strasbourg.</p>
+<p style="margin:0;max-width:62ch">Née le 17 avril 1937 à Brunswick (Braunschweig) en Allemagne, Ingrid Brunstein (née Bielitz) est philologue et a enseigné l'anglais et l'allemand aux adultes. Après un DESS en gestion des ressources humaines, elle a travaillé dans la métallurgie, puis, après un doctorat ès sciences des organisations, elle est devenue maître de conférences à l'université de Strasbourg.</p>
 <p style="margin:0;max-width:62ch">Elle vit en France depuis cinquante ans et a écrit de nombreux articles et livres liés à ses recherches, ainsi que « Ici pas de survivants », récit-document sur son enfance allemande pendant la Seconde Guerre mondiale. Son dernier ouvrage, « Touchants – Touchés », réunit anecdotes et poèmes.</p>
 <p style="margin:0;max-width:62ch">[ARTS PLASTIQUES — peintures et sculptures : techniques, inspirations, expositions.]</p></div>
 </div>
@@ -276,5 +280,28 @@ Je souhaite une dédicace
 
 </div>
 
+<script>
+(function(){
+var URL_COMMANDES='';
+var f=document.getElementById('commande');if(!f)return;
+var s=document.getElementById('commande-statut');
+var b=f.querySelector('button[type=submit]');
+f.addEventListener('submit',function(ev){
+ev.preventDefault();
+if(!URL_COMMANDES){s.style.color='#5E524A';s.textContent="Version de test : la commande n'est pas encore envoyée.";return;}
+var d={};new FormData(f).forEach(function(v,k){d[k]=v;});
+d.dedicace=f.elements['dedicace'].checked;
+b.disabled=true;var t=b.textContent;b.textContent='Envoi en cours…';s.textContent='';
+fetch(URL_COMMANDES,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(d)})
+.then(function(r){return r.json();})
+.then(function(j){
+if(j&&j.ok){f.reset();s.style.color='#2F5D5A';s.textContent="Merci ! Votre commande est bien enregistrée. Ingrid vous écrira rapidement pour confirmer les modalités de règlement et d'envoi.";}
+else{throw new Error('erreur');}
+})
+.catch(function(){s.style.color='#A3452A';s.textContent="Désolé, la commande n'a pas pu être envoyée. Merci de réessayer ou d'écrire à ingrid.brunstein-bielitz@wanadoo.fr.";})
+.finally(function(){b.disabled=false;b.textContent=t;});
+});
+})();
+</script>
 </body>
 </html>
