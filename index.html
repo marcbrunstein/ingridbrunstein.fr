@@ -30,7 +30,7 @@ html{scroll-behavior:smooth}
 <a href="#ouvrages" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Ouvrages</a>
 <a href="#biographie" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Biographie</a>
 <a href="#oeuvres" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Peintures</a>
-<a href="#photos" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center">Photos</a>
+<!-- Photos masquées temporairement : retirer display:none pour réafficher --><a href="#photos" style="text-decoration:none;min-height:44px;display:none;align-items:center">Photos</a>
 <a href="#commander" style="text-decoration:none;min-height:44px;display:inline-flex;align-items:center;padding:0 22px;background:#A3452A;color:#FFFFFF;font-weight:700">Commander</a>
 </nav>
 </div>
@@ -231,34 +231,25 @@ Je souhaite une dédicace
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:40px 32px">
 <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
 <img src="Images/peinture-sans-titre-01.jpg" alt="Peinture abstraite sans titre : tons bleu gris et rouille autour d’une forme sombre en diagonale" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:contain;background:#EFE8DC;display:block">
-<figcaption style="font-size:15px"><strong style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600">Sans titre</strong><br><span style="color:#5E524A">Peinture · Acrylique sur toile · [DIMENSIONS]</span></figcaption>
 </figure>
 <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
 <img src="Images/peinture-sans-titre-02.jpg" alt="Peinture abstraite sans titre, format portrait : forme rouillée entre deux masses sombres sur fond gris et crème" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:contain;background:#EFE8DC;display:block">
-<figcaption style="font-size:15px"><strong style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600">Sans titre</strong><br><span style="color:#5E524A">Peinture · Acrylique sur toile · [DIMENSIONS]</span></figcaption>
 </figure>
 <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
 <img src="Images/peinture-sans-titre-03.jpg" alt="Peinture abstraite sans titre : paysage de matières gris, noir et sable" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:contain;background:#EFE8DC;display:block">
-<figcaption style="font-size:15px"><strong style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600">Sans titre</strong><br><span style="color:#5E524A">Peinture · Acrylique sur toile · [DIMENSIONS]</span></figcaption>
 </figure>
 <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
 <img src="Images/peinture-sans-titre-04.jpg" alt="Peinture sans titre : pommes de terre dans une caisse, ocre et gris" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:contain;background:#EFE8DC;display:block">
-<figcaption style="font-size:15px"><strong style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600">Sans titre</strong><br><span style="color:#5E524A">Peinture · Acrylique sur toile · [DIMENSIONS]</span></figcaption>
-</figure>
-<figure style="margin:0;display:flex;flex-direction:column;gap:12px">
-<img src="Images/peinture-sans-titre-05.jpg" alt="Peinture abstraite sans titre : geste ample en ocre et blanc" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:contain;background:#EFE8DC;display:block">
-<figcaption style="font-size:15px"><strong style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600">Sans titre</strong><br><span style="color:#5E524A">Peinture · Acrylique sur toile · [DIMENSIONS]</span></figcaption>
 </figure>
 <figure style="margin:0;display:flex;flex-direction:column;gap:12px">
 <img src="Images/peinture-sans-titre-06.jpg" alt="Peinture abstraite sans titre, format portrait allongé : trace sombre verticale sur fond sable" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:contain;background:#EFE8DC;display:block">
-<figcaption style="font-size:15px"><strong style="font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600">Sans titre</strong><br><span style="color:#5E524A">Peinture · Acrylique sur toile · [DIMENSIONS]</span></figcaption>
 </figure>
 </div>
 </div>
 </section>
 
 <!-- PHOTOS -->
-<section id="photos" style="background:#F6F1E9">
+<section id="photos" hidden style="background:#F6F1E9;display:none">
 <div style="max-width:1160px;margin:0 auto;padding:88px 24px;display:flex;flex-direction:column;gap:48px">
 <h2 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:48px;line-height:1.05">Photos</h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px">
